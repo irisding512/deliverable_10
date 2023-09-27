@@ -133,8 +133,8 @@ img{
 }
 
 /* Step 4: Write selector/rule property to style the container */
-@media screen and (min-width: 300px) {
   .container{
+    display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     grid-gap: 15px;
   }
@@ -155,6 +155,7 @@ img{
 
   /*This will be a lot of rules.... but be strategic and combine seletors*/
   .about, .method, .clients, .contact{
+    display: grid;
     grid-column: 2 / span 1;
   }
   .about{
@@ -170,6 +171,7 @@ img{
     grid-row-start: 5;
   }
   .about-image, .method-image, .clients-image, .contact-image{
+    display: grid;
     grid-column: 1 / -1;
     max-height: 600px;
     overflow: hidden;
@@ -188,21 +190,19 @@ img{
   }
    /* Step 8: Write the selector/rule property to style the .text-block class. */
   .text-block{
-    align-self: center;
-    justify-self: center;
+    margin: auto;
     text-align: center;
     max-height: 250px;
-    overflow: scroll;
+    overflow: auto;
   }
-}
 
 
 /* Add your media query here */
 @media screen and (min-width: 800px) {
   /* Step 9: Write the selector/rule property to style the nav element */
   nav{
-    display: flex;
-    align-content: flex-end;
+    text-align: right;
+    padding: 30px 0px;
   }
   /* Step 10: Write the selector/rule property to update the .container class */
   .container{
